@@ -35,8 +35,17 @@ pip install -r requirements.txt
 8. Start coding!
 - modify ```interface.py``` and create any additional files you want/need to perform your data analysis
 
+
 ## Running the Simulation
 ```starter.py``` provides a convenient way to launch the simulated environment and the code that interfaces with it.
 
 You can feel free to start each program independently, it doesn't matter which one you start first.
 
+
+## Using a physical IMU
+1. Plug one of the ESP32 boards into your computer. It should already have the necessary code running on the microcontroller. 
+2. Find out which serial port the ESP32 is on for your computer. A quick Google search may help you if you don't know how to do this.
+3. Modify ```interface.py``` to use an ```ArduinoIMU``` object instead of a ```SimulatedIMU```. You might have to import it if it isn't already imported.
+```
+from sensors.imu import ArduinoIMU
+```
