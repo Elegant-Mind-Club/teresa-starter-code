@@ -76,7 +76,7 @@ class SimulatedIMU(IMU):
 
 
 class ArduinoIMU(IMU):
-    def __init__(self, port, baudrate):
+    def __init__(self, port, baudrate=115200):
         self.serial = serial.Serial(port, baudrate)
         self.rpy = [0.0, 0.0, 0.0]
 
