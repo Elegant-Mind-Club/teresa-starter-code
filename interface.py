@@ -1,10 +1,11 @@
-from sensors.imu import SimulatedIMU
+from sensors.imu import SimulatedIMU, ArduinoIMU
 from sensors.servo import Servo
 import time
 
 if __name__ == "__main__":
     # Setup
     imu = SimulatedIMU("data/sample_data.csv")
+    # imu = ArduinoIMU("", baudrate=115200)
     yaw_servo = Servo("yaw")
     pitch_servo = Servo("pitch")
 
